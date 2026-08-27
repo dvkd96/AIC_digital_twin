@@ -1,0 +1,1 @@
+export function estimateConfidence({ instrumentationTier, signalStalenessMs = 0, livePrecision = 0.94 }) { const tierWeight = { full: 0.96, partial: 0.68, none: 0.42 }[instrumentationTier] ?? 0.42; return Math.max(0, Math.min(1, tierWeight * livePrecision * Math.max(0, 1 - signalStalenessMs / 300000))); }

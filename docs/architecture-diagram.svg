@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620">
+  <rect width="1000" height="620" fill="#0b1115"/>
+  <g font-family="Arial, sans-serif" fill="#edf3f2">
+    <text x="500" y="38" text-anchor="middle" font-size="24" font-weight="700">DIGITAL TWIN / SYSTEM ARCHITECTURE</text>
+    <g font-size="16" font-weight="700" text-anchor="middle">
+      <rect x="100" y="70" width="800" height="70" rx="6" fill="#1b302d" stroke="#78d6c5"/><text x="500" y="100">PRESENTATION</text><text x="500" y="124" font-size="12" font-weight="400">Operations | Investigation | Management</text>
+      <rect x="100" y="165" width="800" height="70" rx="6" fill="#332b20" stroke="#f3b562"/><text x="500" y="195">DECIDE / LOOP 3</text><text x="500" y="219" font-size="12" font-weight="400">Explain | Compare | Recommend | Counterfactual</text>
+      <rect x="100" y="260" width="800" height="70" rx="6" fill="#1b302d" stroke="#78d6c5"/><text x="500" y="290">ASSESS / LOOP 2</text><text x="500" y="314" font-size="12" font-weight="400">Predict | Detect | Confidence | Priority Queue</text>
+      <rect x="100" y="355" width="800" height="70" rx="6" fill="#332b20" stroke="#f3b562"/><text x="500" y="385">UNDERSTAND / LOOP 1</text><text x="500" y="409" font-size="12" font-weight="400">Signal ingestion | Soft sensing</text>
+      <rect x="100" y="450" width="800" height="70" rx="6" fill="#202a31" stroke="#87979a"/><text x="500" y="480">TWIN CORE</text><text x="500" y="504" font-size="12" font-weight="400">14-station graph | Simulation | Ground truth</text>
+      <rect x="100" y="545" width="800" height="50" rx="6" fill="#2e2224" stroke="#e67567"/><text x="500" y="576">LEARN / LOOP 4: outcomes → metrics → confidence</text>
+    </g>
+    <g stroke="#87979a" stroke-width="2" fill="none"><path d="M500 140v25M500 235v25M500 330v25M500 425v25"/><path d="M900 570h60V295h-60"/></g>
+  </g>
+</svg>
