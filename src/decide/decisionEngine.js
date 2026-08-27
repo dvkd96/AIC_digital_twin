@@ -1,6 +1,5 @@
 export function explain(prediction) {
-  const isS2 = prediction.stationId === 'S2';
-  return [{ label: 'Risk signal', value: prediction.risk, note: isS2 ? 'Cycle time rising across 3 ticks' : 'Queue depth elevated' }, { label: 'Evidence confidence', value: prediction.confidence, note: isS2 ? 'Full PLC coverage' : 'Inferred from neighboring stations' }, { label: 'Downstream impact', value: prediction.impact, note: 'Touches final assembly throughput' }];
+  return [...(prediction.evidence ?? []), { label: 'Evidence confidence', value: prediction.confidence, note: prediction.confidence < 0.5 ? 'Inferred from neighboring stations' : 'Full PLC coverage' }, { label: 'Downstream impact', value: prediction.impact, note: 'Touches final assembly throughput' }];
 }
 
 export function compareActions(prediction) {
