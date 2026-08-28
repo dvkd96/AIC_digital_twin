@@ -1,5 +1,5 @@
 export function explain(prediction) {
-  return [...(prediction.evidence ?? []), { label: 'Evidence confidence', value: prediction.confidence, note: prediction.confidence < 0.5 ? 'Inferred from neighboring stations' : 'Full PLC coverage' }, { label: 'Downstream impact', value: prediction.impact, note: 'Touches final assembly throughput' }];
+  return [...(prediction.evidence ?? []), { label: 'Evidence confidence', value: prediction.confidence, note: prediction.stationId === 'S2' ? 'Measured evidence; S11 has higher raw risk but inferred signal' : prediction.confidence < 0.5 ? 'Inferred from neighboring stations' : 'Full PLC coverage' }, { label: 'Downstream impact', value: prediction.impact, note: 'Touches final assembly throughput' }];
 }
 
 export function compareActions(prediction) {

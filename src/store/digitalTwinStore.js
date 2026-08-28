@@ -20,8 +20,8 @@ export function advanceTwin(store, tick) {
   return { simulation, eventLog: events.slice(0, 8) };
 }
 
-export function createTwinSnapshot(store, tick = 0) {
+export function createTwinSnapshot(store, tick = 0, { s11Retrofitted = false } = {}) {
   const simulation = store?.simulation ?? tickSimulation(createSimulationState(), tick);
-  const signals = inferMissingSignals(normalizeSignals(simulation, stationGraph), stationGraph);
+  const signals = inferMissingSignals(normalizeSignals(simulation, stationGraph), stationGraph).map((signal) => signal.stationId === 'S11' && s11Retrofitted ? { ...signal, measured: true, confidenceOfSignal: 0.81 } : signal);
   return { tick, simulation, signals, predictions: rankPredictions(buildPredictions(signals, stationGraph)), metrics: learningMetrics, eventLog: store?.eventLog ?? ['Simulation initialized.'] };
 }
