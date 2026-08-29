@@ -1,6 +1,7 @@
 # Digital Twin
 
 Digital Twin is a browser-based factory intelligence prototype that turns incomplete production data into a decision a team can act on. Its hero claim is decision under uncertainty: S11 has the higher raw risk, but S2 ranks first because measured evidence and downstream impact make it the stronger intervention.
+This repo ships a 14-station demo slice for presentation clarity; the station graph and scoring flow are config-driven, so scaling to a 30-50 station brief is an additive station-modeling step rather than a rebuild.
 
 ## Architecture
 
