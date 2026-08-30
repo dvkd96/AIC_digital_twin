@@ -113,13 +113,13 @@ This repository contains a modular front-end prototype built with React and Vite
 
 ```text
 src/
-  twin-core/      station graph, simulation engine, scripted events, genealogy
+  twin-core/      station graph and simulation engine
   understand/     signal ingestion and soft sensing
-  assess/         predictors, confidence, anomalies, priority queue
-  decide/         recommendations, comparison, explanations, projections
+  assess/         prediction ranking
+  decide/         recommendations, explanations, and projections
   learn/          outcome validation and metrics tracking
   store/          shared snapshot for all views
-  shared/         shared types
+  shared/         shared signal types
 ```
 
 ## Getting Started
