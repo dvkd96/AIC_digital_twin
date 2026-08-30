@@ -27,18 +27,7 @@ Digital Twin combines simulated plant state, soft sensing, explainable ranking, 
 - It supports action comparison and lightweight counterfactual simulation.
 - It shows how targeted sensing upgrades can improve confidence in partially observed stations.
 
-## Competition Relevance
-
-This project was designed as a working prototype for competition and hackathon review. It focuses on three qualities judges usually look for:
-
-- a clear real-world problem,
-- a technically coherent solution,
-- and an understandable demo story with visible product value.
-
 The prototype uses a 14-station, 3-zone demo slice for clarity and presentation speed. The station graph and scoring flow are config-driven, so scaling toward a 30 to 50 station scenario is an extension of the model, not a redesign of the architecture.
-
-## Key Features
-
 - Live station graph showing connected factory activity
 - Priority queue driven by `risk × confidence × impact`
 - Explainable breakdown of why a signal is ranked where it is
